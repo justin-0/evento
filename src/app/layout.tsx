@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/ui/footer";
+import Navigation from "@/ui/navigation";
 
 const satoshi = localFont({
   src: [
@@ -40,7 +42,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} font-satoshi`}>{children}</body>
+      <body className={`${satoshi.variable} font-satoshi`}>
+        <Navigation />
+        {children}
+        <button className="mt-4 rounded bg-blue-500 px-4 py-2 text-base text-white">
+          {children}
+        </button>
+        <Footer />
+      </body>
     </html>
   );
 }
