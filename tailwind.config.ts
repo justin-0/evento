@@ -7,10 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      satoshi: ["var(--font-satoshi)"],
+    extend: {
+      fontFamily: {
+        satoshi: ["var(--font-satoshi)"],
+      },
     },
-    extend: {},
   },
   plugins: [],
 };
