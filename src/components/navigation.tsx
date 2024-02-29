@@ -15,20 +15,28 @@ export default function Navigation() {
           evento
         </Link>
       </div>
-      <div className="flex h-full items-center gap-x-8 text-sm text-white/60">
+      <div className="relative flex h-full items-center gap-x-8 text-sm text-white/60">
         <Link
           href="/"
-          className={clsx("transition hover:text-white", {
-            "font-medium text-white": path === "/",
-          })}
+          className={clsx(
+            "flex h-full items-center transition hover:text-white",
+            {
+              "border-accent border-b-2 font-medium text-white transition":
+                path === "/",
+            },
+          )}
         >
           Home
         </Link>
         <Link
           href="/events/all"
-          className={clsx("transition hover:text-white", {
-            "font-medium text-white": path === "/events/all",
-          })}
+          className={clsx(
+            "flex h-full items-center transition hover:text-white",
+            {
+              "border-accent border-b-2 font-medium text-white transition":
+                path === "/events/all",
+            },
+          )}
         >
           All Events
         </Link>
