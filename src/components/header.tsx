@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { getPathname } from "@/lib/getPathname";
 
-export default function Heading() {
+export default function EventsHeading() {
   const path = usePathname();
   const destination = getPathname(path);
 

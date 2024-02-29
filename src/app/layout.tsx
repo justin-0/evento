@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} bg-green-950 font-satoshi text-neutral-100`}
+        className={`${satoshi.variable} min-h-screen bg-green-950 font-satoshi text-neutral-100`}
       >
         <Navigation />
         {children}

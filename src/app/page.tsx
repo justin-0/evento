@@ -10,7 +10,7 @@ export default function Home() {
         </h1>
         <p className="mt-2 font-light lg:text-xl">
           Browse more than{" "}
-          <span className="text-accent italic underline">10,000 events</span>{" "}
+          <span className="italic text-accent underline">10,000 events</span>{" "}
           nationwide
         </p>
         <SearchForm />
@@ -18,13 +18,13 @@ export default function Home() {
           <span className="">Popular:</span>
           <div className="flex gap-x-2 font-medium">
             <Link href="/events/london" className="transition hover:text-white">
-              London
+              Austin
             </Link>
             <Link
               href="/events/swindon"
               className="transition hover:text-white"
             >
-              Swindon
+              Seattle
             </Link>
           </div>
         </div>

@@ -20,8 +20,7 @@ export default function Navigation() {
           className={clsx(
             "flex h-full items-center transition hover:text-white",
             {
-              "border-b-2 border-accent font-medium text-white transition":
-                path === "/",
+              "font-medium text-white transition": path === "/",
             },
           )}
         >
@@ -32,8 +31,7 @@ export default function Navigation() {
           className={clsx(
             "flex h-full items-center transition hover:text-white",
             {
-              "border-b-2 border-accent font-medium text-white transition":
-                path === "/events/all",
+              "font-medium text-white transition": path === "/events/all",
             },
           )}
         >
