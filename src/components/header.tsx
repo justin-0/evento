@@ -2,13 +2,18 @@
 
 import { usePathname } from "next/navigation";
 import { getPathname } from "@/lib/getPathname";
+import { twMerge } from "tailwind-merge";
 
-export default function EventsHeading() {
+type EventsHeadingProps = {
+  className?: string;
+};
+
+export default function EventsHeading({ className }: EventsHeadingProps) {
   const path = usePathname();
   const destination = getPathname(path);
 
   return (
-    <h1 className="mb-5 mt-8 text-xl font-bold lg:text-4xl">
+    <h1 className={twMerge("text-xl font-bold lg:text-4xl", className)}>
       {destination === "All"
         ? `${destination} Events`
         : `Events in ${destination}`}
