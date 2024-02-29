@@ -1,5 +1,6 @@
+import EventsList from "@/components/events-list";
 import EventsHeading from "@/components/header";
-import { Event } from "@/lib/types";
+import { EventoEvent } from "@/lib/types";
 
 type EventsPageProps = {
   params: {
@@ -11,12 +12,14 @@ export default async function Events({ params }: EventsPageProps) {
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events?city=${params.city}`,
   );
-  const events: Event[] = await response.json();
-  console.log(events);
+  const events: EventoEvent[] = await response.json();
+
+  if (!events) alert("Error");
 
   return (
-    <main className="flex h-[85vh] flex-col items-center px-5 md:px-24">
+    <main className="flex flex-col items-center px-5 md:px-24">
       <EventsHeading />
+      <EventsList events={events} />
     </main>
   );
 }

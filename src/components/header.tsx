@@ -8,7 +8,7 @@ export default function EventsHeading() {
   const destination = getPathname(path);
 
   return (
-    <h1 className="text-xl font-bold lg:text-4xl">
+    <h1 className="mb-5 mt-8 text-xl font-bold lg:text-4xl">
       {destination === "All"
         ? `${destination} Events`
         : `Events in ${destination}`}
