@@ -1,4 +1,4 @@
 type pageProps = {};
 export default function Events({}: pageProps) {
-  return <div>Events City</div>;
+  return <main className="px-5 md:px-24">Events City</main>;
 }
