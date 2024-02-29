@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         satoshi: ["var(--font-satoshi)"],
       },
+      colors: {
+        accent: "#ccda4c",
+      },
     },
   },
   plugins: [],
