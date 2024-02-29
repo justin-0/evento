@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const path = usePathname();
-  console.log(path);
 
   return (
     <nav className="flex h-12 w-full items-center justify-between border-b border-neutral-500/30 px-5 md:px-24">
@@ -21,7 +20,7 @@ export default function Navigation() {
           className={clsx(
             "flex h-full items-center transition hover:text-white",
             {
-              "border-accent border-b-2 font-medium text-white transition":
+              "border-b-2 border-accent font-medium text-white transition":
                 path === "/",
             },
           )}
@@ -33,7 +32,7 @@ export default function Navigation() {
           className={clsx(
             "flex h-full items-center transition hover:text-white",
             {
-              "border-accent border-b-2 font-medium text-white transition":
+              "border-b-2 border-accent font-medium text-white transition":
                 path === "/events/all",
             },
           )}

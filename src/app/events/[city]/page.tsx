@@ -1,4 +1,9 @@
-type pageProps = {};
-export default function Events({}: pageProps) {
-  return <main className="px-5 md:px-24">Events City</main>;
+import Heading from "@/components/header";
+
+export default function Events() {
+  return (
+    <main className="px-5 md:px-24">
+      <Heading />
+    </main>
+  );
 }
