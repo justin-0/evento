@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/cn";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,7 +18,7 @@ export default function Navigation() {
       <div className="relative flex h-full items-center gap-x-8 text-sm text-white/60">
         <Link
           href="/"
-          className={clsx(
+          className={cn(
             "flex h-full items-center transition hover:text-white",
             {
               "font-medium text-white transition": path === "/",
@@ -28,7 +29,7 @@ export default function Navigation() {
         </Link>
         <Link
           href="/events/all"
-          className={clsx(
+          className={cn(
             "flex h-full items-center transition hover:text-white",
             {
               "font-medium text-white transition": path === "/events/all",
