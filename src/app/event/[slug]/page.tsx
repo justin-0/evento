@@ -1,3 +1,4 @@
+import { sleep } from "@/lib/sleep";
 import { EventoEvent } from "@/lib/types";
 import Image from "next/image";
 
@@ -7,6 +8,7 @@ type EventPageProps = {
   };
 };
 export default async function EventPage({ params }: EventPageProps) {
+  await sleep(3000);
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events/${params.slug}`,
   );
