@@ -17,11 +17,11 @@ export default function Home() {
         <div className="mt-2 flex gap-x-4 text-sm text-white/75">
           <span className="">Popular:</span>
           <div className="flex gap-x-2 font-medium">
-            <Link href="/events/london" className="transition hover:text-white">
+            <Link href="/events/austin" className="transition hover:text-white">
               Austin
             </Link>
             <Link
-              href="/events/swindon"
+              href="/events/seattle"
               className="transition hover:text-white"
             >
               Seattle

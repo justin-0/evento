@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="flex h-[100vh] flex-wrap items-center justify-center gap-4 pt-10">
+    <div className="flex h-[100vh] flex-wrap items-center justify-center gap-x-4">
       <Skeleton page={"events"} />
       <Skeleton page={"events"} />
       <Skeleton page={"events"} />
