@@ -16,7 +16,7 @@ export default function Events({ params, searchParams }: EventsPageProps) {
   return (
     <main className="flex flex-col items-center ">
       <EventsHeading className="mb-10 mt-10" />
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />} key={page + params.city}>
         <EventsList city={params.city} page={+page} />
       </Suspense>
     </main>
