@@ -8,12 +8,10 @@ type EventPageProps = {
   };
 };
 export default async function EventPage({ params }: EventPageProps) {
-  await sleep(3000);
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events/${params.slug}`,
   );
   const event: EventoEvent = await response.json();
-  console.log(event);
 
   return (
     <main className="min-h-screen px-5 md:px-24">

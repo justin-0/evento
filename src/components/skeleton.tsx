@@ -21,6 +21,8 @@ export default function Skeleton({ page }: SkeletonProps) {
     return (
       <>
         <div className="h-[25vh] w-[25vw] animate-pulse rounded bg-white/20"></div>
+        <div className="h-[25vh] w-[25vw] animate-pulse rounded bg-white/20"></div>
+        <div className="h-[25vh] w-[25vw] animate-pulse rounded bg-white/20"></div>
       </>
     );
   }

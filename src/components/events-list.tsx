@@ -6,7 +6,6 @@ type EventsListProps = {
   city: string;
 };
 export default async function EventsList({ city }: EventsListProps) {
-  await sleep(5000);
   const response = await fetch(
     `https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`,
   );

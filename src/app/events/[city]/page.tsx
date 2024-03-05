@@ -9,7 +9,7 @@ type EventsPageProps = {
   };
 };
 
-export default async function Events({ params }: EventsPageProps) {
+export default function Events({ params }: EventsPageProps) {
   return (
     <main className="flex flex-col items-center px-5 md:px-24">
       <EventsHeading className="mb-10 mt-10" />
