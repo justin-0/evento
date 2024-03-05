@@ -1,5 +1,6 @@
 import { EventoEvent } from "@prisma/client";
 import Image from "next/image";
+import { getEvent } from "@/lib/prismaFetch";
 
 type EventPageProps = {
   params: {
@@ -7,10 +8,9 @@ type EventPageProps = {
   };
 };
 export default async function EventPage({ params }: EventPageProps) {
-  const response = await fetch(
-    `https://bytegrad.com/course-assets/projects/evento/api/events/${params.slug}`,
-  );
-  const event: EventoEvent = await response.json();
+  const event = await getEvent(params.slug);
+
+  if (!event) return;
 
   return (
     <main className="min-h-screen px-5 md:px-24">
