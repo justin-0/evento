@@ -1,7 +1,5 @@
-import { EventoEvent, PrismaClient } from "@prisma/client";
 import { capitalize } from "./capitalise";
-
-const prisma = new PrismaClient();
+import prisma from "./db";
 
 export async function getEvent(slug: string) {
   const event = await prisma.eventoEvent.findUnique({
