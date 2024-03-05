@@ -1,5 +1,4 @@
-import { sleep } from "@/lib/sleep";
-import { EventoEvent } from "@/lib/types";
+import { EventoEvent } from "@prisma/client";
 import Image from "next/image";
 
 type EventPageProps = {

@@ -1,6 +1,5 @@
-import { EventoEvent } from "@/lib/types";
+import { EventoEvent } from "@prisma/client";
 import EventCard from "./event-card";
-import { sleep } from "@/lib/sleep";
 
 type EventsListProps = {
   city: string;
