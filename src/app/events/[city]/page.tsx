@@ -7,14 +7,17 @@ type EventsPageProps = {
   params: {
     city: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function Events({ params }: EventsPageProps) {
+export default function Events({ params, searchParams }: EventsPageProps) {
+  const page = searchParams.page || 1;
+
   return (
-    <main className="flex flex-col items-center px-5 md:px-24">
+    <main className="flex flex-col items-center ">
       <EventsHeading className="mb-10 mt-10" />
       <Suspense fallback={<Loading />}>
-        <EventsList city={params.city} />
+        <EventsList city={params.city} page={+page} />
       </Suspense>
     </main>
   );
