@@ -6,9 +6,9 @@ import PaginationControl from "./pagination-control";
 
 type EventsListProps = {
   city: string;
-  page: number;
+  page?: number;
 };
-export default async function EventsList({ city, page }: EventsListProps) {
+export default async function EventsList({ city, page = 1 }: EventsListProps) {
   const { events, totalCount } = await getEvents(city, page);
   console.log(totalCount);
   const totalPages = totalCount / 6;
