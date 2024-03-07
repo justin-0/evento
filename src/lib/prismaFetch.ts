@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { capitalize } from "./capitalise";
 import prisma from "./db";
+import "server-only";
 
 export async function getEvent(slug: string) {
   const event = await prisma.eventoEvent.findUnique({
