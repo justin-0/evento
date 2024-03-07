@@ -1,4 +1,3 @@
-import { EventoEvent } from "@prisma/client";
 import Image from "next/image";
 import { getEvent } from "@/lib/prismaFetch";
 
